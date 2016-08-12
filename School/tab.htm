@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript" src="../Inc/jquery-1.7.1.min.js"></script>
+<link href="../Css/main.css" rel="stylesheet" type="text/css" />
+ <script type="text/javascript">
+        $(function() {
+           $("#checkAll").click(function() {
+                $('input[name="subBox"]').attr("checked",this.checked); 
+            });
+            var $subBox = $("input[name='subBox']");
+            $subBox.click(function(){
+				$("#checkAll").attr("checked",$subBox.length == $("input[name='subBox']:checked").length ? true : false);
+            });
+        });
+    </script>
+
+
+</head>
+<style>
+
+p{font-size:14px;line-height:160%}
+h1{font-size:18px;color:#013f88;font-weight:bold;}
+#helpContent img{ vertical-align:middle;}
+</style>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="15" height="30"><img src="../Images/tab_03.gif" width="15" height="30" /></td>
+        <td width="1101" background="../Images/tab_05.gif"  class="tdStyle"><img src="../Images/main_51.gif" width="16" height="16" /> <span class="tbTitle">报名流程</span></td>
+        <td width="281" background="../Images/tab_05.gif">&nbsp;</td>
+        <td width="14"><img src="../Images/tab_07.gif" width="14" height="30" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="9" background="../Images/tab_12.gif">&nbsp;</td>
+        <td bgcolor="#f3ffe3"><p id="helpContent">
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#creatNo">如何审核考生？</a><br>
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#print">如何查询成绩？</a><br>
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#uncheckInfor">关于反审核说明！</a><br>
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#del">删除的考生信息说明！</a><br>
+        
+   
+        
+    
+        
+ <a name="creatNo" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">如何审核考生</span><br>
+        如下图①点击：查询所有考生，是查看当前考试学校所有注册的考生。并可以审核个人信息 如图②<br>
+        查询考试考生，需要选择考试然后查询当前考试下的考生<br>
+        审核报考信息，只能在考试考生查询，才可以审核 如果图③。
+         <br>
+         <img src="../Images/help/school/query_1.png" width="1051" height="500" /><br>
+         <img src="../Images/help/school/query_2.png" width="1293" height="489" /><br><br> <a name="print" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">如何查询成绩</span><br>
+          如下图①点击查询成绩 ②导出excel<br>
+          <img src="../Images/help/school/query_3.png" width="1097" height="569" /> <br><br>
+           
+          <a name="uncheckInfor" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">关于反审核说明</span><br>
+         反审核考生，报考信息时。如果果考生已经被分配座位,不允许反审核。<br>
+         反审核考生，报考信息时。考试已经完结,不允许反审核。<br>
+          <a name="del" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">删除的考生信息说明</span><br>
+          在查询所有考生中选项中 如果考生有报考考试，不可以删除考生信息。<br>
+          在查询考试考生中选项中 删除考生信息，将删除考生的报考信息 不会删除除自然信息。<br>
+          
+          <br>
+          <br>
+          <br>
+          <br>
+          </td>
+        <td width="9" background="../Images/tab_16.gif">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="29"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="15" height="29"><img src="../Images/tab_20.gif" width="15" height="29" /></td>
+        <td background="../Images/tab_21.gif"></td>
+        <td width="14"><img src="../Images/tab_22.gif" width="14" height="29" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

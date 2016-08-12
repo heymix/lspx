@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript" src="../Inc/jquery-1.7.1.min.js"></script>
+<link href="../Css/main.css" rel="stylesheet" type="text/css" />
+ <script type="text/javascript">
+        $(function() {
+           $("#checkAll").click(function() {
+                $('input[name="subBox"]').attr("checked",this.checked); 
+            });
+            var $subBox = $("input[name='subBox']");
+            $subBox.click(function(){
+				$("#checkAll").attr("checked",$subBox.length == $("input[name='subBox']:checked").length ? true : false);
+            });
+        });
+    </script>
+
+
+</head>
+<style>
+
+p{font-size:14px;line-height:160%}
+h1{font-size:18px;color:#013f88;font-weight:bold;}
+#helpContent img{ vertical-align:middle;}
+</style>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="15" height="30"><img src="../Images/tab_03.gif" width="15" height="30" /></td>
+        <td width="1101" background="../Images/tab_05.gif"  class="tdStyle"><img src="../Images/main_51.gif" width="16" height="16" /> <span class="tbTitle">报名流程</span></td>
+        <td width="281" background="../Images/tab_05.gif">&nbsp;</td>
+        <td width="14"><img src="../Images/tab_07.gif" width="14" height="30" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="9" background="../Images/tab_12.gif">&nbsp;</td>
+        <td bgcolor="#f3ffe3"><p id="helpContent">
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#addschool">如何为本考点添加学校？</a><br>
+       	<img src="../Images/run.gif" width="16" height="14" /><a href="#exam">如何建立考场？</a><br>
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#seat">如何分配考试座位？</a><br>
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#moreCalss">如何建立一个大教室多个考场？</a><br>
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#pubexam">如何把已经分配好考生进行调整？</a><br>
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#creatNo">如何生成准考证号？</a><br>
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#print">如何打印准考证？</a><br>
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#uncheckInfor">关于反审核说明！</a><br>
+        <img src="../Images/run.gif" width="16" height="14" /><a href="#del">删除的考生信息说明！</a><br>
+        
+        <a name="addschool" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">为本考点添加学校</span><br><br>
+         第一步 点击学校管理，管理考试的学校 进入学校管理界面。如下图所示
+         ② 可以移除学校 点击③添加学校 进入下一步<br>
+        <img src="../Images/help/exam/addSchool_1.png" width="1063" height="611" /><br><br>
+        点击添加学校，进入学校列表界面， 此列表是当前考试类别未分配的学校。可以多选然后点击添加即可成功添加。<br>
+        <img src="../Images/help/exam/addSchool_2.png" width="1063" height="611" /><br><br> 
+        
+        <a name="exam" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">如何建立考场</span><br><br>
+        第一步点击考点管理，①编制考场号，进入考场号管理。编制考场号之前，要先选择要为哪次考试进行编制 如图所示②
+        <img src="../Images/help/exam/exam_1.png" width="1063" height="611" /><br><br>
+        进入如下图界面，输入：教室、考场号、最大座位数。 其中教室可以输入汉字  考场号和最大座位数只能是数字。
+        <img src="../Images/help/exam/exam_2.png" width="1063" height="611" /><br><br>
+        考场查询管理：可以从重编辑考场，但要在反审核下才可以编辑。<br>
+        注意：删除教室的时候 如果当时座位上已经被分配了考生。删除会出现错误提示，请移除座位上的考试，方可继续操作。
+        <img src="../Images/help/exam/exam_3.png" width="1063" height="611" /><br> <br> 
+        <a name="seat" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">如何分配考试座位</span><br>
+        第一步 ①点击考点管理，分配调整座位。 如下图所示<br>
+        ②选择当前考试，显示当前考生分配情况。③考场④座位分配情况 <br>
+        ⑦随机插入 普通考生或者补考考生 并可查看分配进行微调<br>
+        ⑥是生成和撤销考号<br>
+        当生成考号了如⑤不能再进行微调座位 可以查看和打印考场对应单<br>
+        <img src="../Images/help/exam/seat_1.png" width="1143" height="534" /><br><br> 
+        <a name="moreCalss" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">如何建立一个大教室多个考场</span><br><br>
+        如下图打开编号考场号，如果是一个大教室 多个考场可以填相面的教室号 不同的考场即可<br>
+        <img src="../Images/help/exam/exam_2.png" width="1063" height="611" /><br><br>
+        
+         <a name="pubexam" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">如何把已经分配好考生进行调整</span><br>
+         进入分配调整座位在未生成考号的情况下,如下图⑦可以点击可以点击查看分配进入下一步<br>
+         
+         <img src="../Images/help/exam/seat_1.png" width="1143" height="534" /><br><br>
+         如下图座位分配情况，可以对座位进行微调，也可以点②进行调换座位。也可以对考生进行移除，批量添加。③ <br>
+         <img src="../Images/help/exam/seat_2.png" width="1057" height="505" /><br><br> <a name="creatNo" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">如何生成考号</span><br>
+        如下图⑥生成考号 生成后如图上⑤ 可查看考场对应单
+         <img src="../Images/help/exam/seat_1.png" width="1143" height="534" /><br><br>
+         
+          <a name="print" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">如何打印准考证</span><br>
+          如下图③可以按学校进行打印 ④选择打印预览<br>
+          <img src="../Images/help/exam/print_1.png" width="1096" height="510" /><br><br>
+          按打印按钮 可以进行打印 可一次打印20份<br>
+          <img src="../Images/help/exam/print_2.png" width="731" height="586" /><br> 
+          <a name="uncheckInfor" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">关于反审核说明</span><br>
+         反审核考生，报考信息时。如果果考生已经被分配座位,不允许反审核。<br>
+         反审核考生，报考信息时。考试已经完结,不允许反审核。<br>
+          <a name="del" class="helpTitle"><img src="../Images/main_51.gif" width="12" height="12" /></a><span class="helpTitle">删除的考生信息说明</span><br>
+          在查询所有考生中选项中 如果考生有报考考试，不可以删除考生信息。<br>
+          在查询考试考生中选项中 删除考生信息，将删除考生的报考信息 不会删除除自然信息。<br>
+          
+          <br>
+          <br>
+          <br>
+          <br>
+          </td>
+        <td width="9" background="../Images/tab_16.gif">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="29"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="15" height="29"><img src="../Images/tab_20.gif" width="15" height="29" /></td>
+        <td background="../Images/tab_21.gif"></td>
+        <td width="14"><img src="../Images/tab_22.gif" width="14" height="29" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

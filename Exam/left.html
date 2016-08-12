@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>左侧导航</title>
+<style type="text/css">
+<!--
+body,form,div,img{
+	margin: 0px;
+	font-size: 12px;
+	color: #1F4A65;
+	padding: 0px;
+	border:0px;
+}
+ul {list-style:none;margin:0px; margin:0px; padding:0px} 
+
+.clear{clear: both;position: relative;left: 0px;}
+.clear5{clear: both;position: relative;left: 0px; height:5px}
+a:link {
+	font-size: 12px;
+	color: #06482a;
+	text-decoration: none;
+
+}
+a:visited {
+	font-size: 12px;
+	color: #06482a;
+	text-decoration: none;
+}
+a:hover {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a:active {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+.leftMenu{}
+.leftMenu li{margin-top:5px;position: relative;left: 20px;}
+.leftMenu li ul li{
+	margin-top:0px;
+	left: 0px;
+	background-image: url(../Images/left_line.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.leftMenu li ul li a{
+	left: 15px;
+	position: relative;
+}
+.leftMenu li img{
+	vertical-align: middle;
+}
+.leftMenu span{
+	font-weight: bold;
+	cursor: pointer;
+	color: #333;
+}
+.leftMenu span img{
+	margin-right:4px;
+}
+.leftMenu li ul li img{
+	margin-right:4px;
+}
+-->
+</style>
+<script language="javascript" src="../Inc/jquery-1.7.1.min.js"></script>
+<script language="javascript">
+$(document).ready(function() {
+	for(i=0;i<=13;i++){
+			$("#show"+i).css("display","none");
+		}
+	$("#show1").css("display","block");
+		 $.post(	"../Html/getNoticeList.asp?cate=1", 
+				{subBox:"0"}, 
+				function(data,st){
+							$("#show11").append(data);	
+				});
+		   $.post(	"../Html/getNoticeList.asp?cate=2", 
+				{subBox:"0"}, 
+				function(data,st){
+							$("#show12").append(data);	
+				});
+});
+
+function showmenu(list_num){
+		for(i=0;i<=13;i++){
+			$("#show"+i).css("display","none");
+		}
+	if($("#show"+list_num).css("display")=="none"){
+			$("#show"+list_num).css("display","block");
+		}else{
+			$("#show"+list_num).css("display","none");
+		}
+}
+
+</script>
+</head>
+
+<body>
+<table width="177" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed">
+      <tr>
+        <td height="26" background="../Images/main_21.gif">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="80" style="background-image:url(../Images/main_23.gif); background-repeat:repeat-x;"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="45"><div align="center"><a href="#"><img src="../Images/main_26.gif" name="Image1" width="40" height="40" border="0" id="Image1" /></a></div></td>
+            <td><div align="center"><a href="#"><img src="../Images/main_28.gif" name="Image2" width="40" height="40" border="0" id="Image2" /></a></div></td>
+            <td><div align="center"><a href="#"><img src="../Images/main_31.gif" name="Image3" width="40" height="40" border="0" id="Image3"/></a></div></td>
+          </tr>
+          <tr>
+            <td height="25"><div align="center" class="STYLE2"><a href="javascript:void(0)" onclick="window.top.frames['mainFrame'].frames['main'].location = 'print.asp'">准考证</a></div></td>
+            <td><div align="center" class="STYLE2"><a href="javascript:void(0)"  onclick="window.top.frames['mainFrame'].frames['main'].location = 'exam_examniee.asp'">查询考生</a></div></td>
+            <td><div align="center" class="STYLE2"><a href="javascript:void(0)" onclick="window.top.frames['mainFrame'].frames['main'].location = 'score_pub.asp'">成绩查询</a></div></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td  style="line-height:4px; background:url(../Images/main_38.gif)">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+  		<td><div class="clear5"></div>
+<ul class="leftMenu">
+  <li><span  onclick="showmenu(2)"><img src="../Images/product.gif" width="16" height="14" />考点管理</span>
+    <ul id="show2">
+    
+      <li><a href="javascript:void(0)" onclick="window.top.frames['mainFrame'].frames['main'].location = 'exam_room_add.asp'"><img src="../Images/test.gif" width="16" height="15" />编制考场号</a></li>
+      <li><a href="javascript:void(0)"  onclick="window.top.frames['mainFrame'].frames['main'].location = 'exam_room.asp'"><img src="../Images/test.gif" width="16" height="15" />考场号查询管理</a></li>
+      <li><a href="javascript:void(0)" onclick="window.top.frames['mainFrame'].frames['main'].location = 'exam_room_seat_distribute.asp'"><img src="../Images/test.gif" width="16" height="15" />分配调整座位</a></li>
+      <li><a href="javascript:void(0)"  onclick="window.top.frames['mainFrame'].frames['main'].location = 'exam_examniee.asp'"><img src="../Images/test.gif" width="16" height="15" />查询考点考生</a></li>
+      </ul>    
+  </li>
+    <li ><span onclick="showmenu(3)"><img src="../Images/home.gif" width="16" height="14" />学校管理</span>
+		<ul id="show3">
+            <li><a href="javascript:void(0)" onclick="window.top.frames['mainFrame'].frames['main'].location = 'exam.asp'"><img src="../Images/add.gif" width="16" height="14" />管理考试学校</a></li>
+        </ul>    
+    </li>
+    <li ><span onclick="showmenu(8)"><img src="../Images/role.gif" width="16" height="14" />考生信息</span>
+		<ul id="show8">
+			<li><a href="javascript:void(0)"  onclick="window.top.frames['mainFrame'].frames['main'].location = 'examniee.asp'"><img src="../Images/add.gif" width="16" height="14" />查询所有考生</a></li>
+            <li><a href="javascript:void(0)"  onclick="window.top.frames['mainFrame'].frames['main'].location = 'exam_examniee.asp'"><img src="../Images/add.gif" width="16" height="14" />按考试查询</a></li>
+        </ul>    
+    </li>
+    <li ><span onclick="showmenu(5)"><img src="../Images/table.gif" width="16" height="14" />成绩管理</span>
+		<ul id="show5">
+            <li><a href="javascript:void(0)"  onclick="window.top.frames['mainFrame'].frames['main'].location = 'score_pub.asp'"><img src="../Images/add.gif" width="16" height="14" />成绩查询</a></li>
+        </ul>    
+    </li>
+    <li ><span onclick="showmenu(4)"><img src="../Images/db.gif" width="16" height="14" />数据中心</span>
+      <ul id="show4">
+        <li><a href="javascript:void(0)" onclick="window.top.frames['mainFrame'].frames['main'].location = 'query.asp'"><img src="../Images/add.gif" width="16" height="14" />统计查询</a></li>
+        </ul>    
+    </li>
+     <li><span  onclick="showmenu(11)"><img src="../Images/exam.gif" width="16" height="14" />公告通知信息</span>
+		<ul id="show11">
+        </ul>    
+    </li>
+	<li><span  onclick="showmenu(12)"><img src="../Images/product.gif" width="16" height="14" />相关下载</span>
+		<ul id="show12">
+        </ul>    
+    </li>
+        <li ><span onclick="showmenu(10)"><img src="../Images/doc.gif" width="16" height="14" />打印准考证</span>
+		<ul id="show10">
+			<li><a href="javascript:void(0)" onclick="window.top.frames['mainFrame'].frames['main'].location = 'print.asp'"><img src="../Images/add.gif" width="16" height="14" />打印准考证</a></li>
+        </ul>    
+    </li>
+</ul></td>
+  </tr>
+</table>
+
+</body>
+</html>
