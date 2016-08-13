@@ -94,7 +94,7 @@ for i=0 to Ubound(user_arr)
 	set rs=nothing
 	%>
 <div id="container">
-	<div id="user_photo"><img src="..//UpLoadFiles/userPhoto/<%=PHOTO%>" height="80" width="60"></div>
+	<div id="user_photo"><img src="..//UpLoadFiles/userPhoto/<%=PHOTO%>" height="160" width="120"></div>
 	<div id="p_name"><%=REAL_NAME%></div>
     <div id="gender"><%=getGender(GENDER)%></div>
     <div id="year"><%=CERT_TIME%></div>
