@@ -27,14 +27,15 @@ body,form,div,img,table,a,font,radio,span,h1,h2,h3,h4{
 	height: 192mm;
 }
 
-#user_photo｛
-
-	position: absolute;
+#user_photo{position: absolute;
 	top: 5px;
 	left: 350px;
 	font-weight: bold;
+	}
 
-｝
+	
+
+	
 #p_name{
 	position: absolute;
 	top: 35px;
