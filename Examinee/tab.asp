@@ -27,7 +27,7 @@
 		set rs=conn.execute("select top 1 NOTICE,TITLE From T_NOTICE where IS_TOP=1 order by info_Time desc")
 		If not (rs.eof or rs.bof) Then
 			title=rs("TITLE")
-			notice= rs("NOTICE")
+			notice=rs("NOTICE")
 		End If
 		rs.close
 		set rs=nothing
