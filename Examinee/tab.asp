@@ -27,7 +27,7 @@
 		set rs=conn.execute("select top 1 NOTICE,TITLE From T_NOTICE where IS_TOP=1 order by info_Time desc")
 		If not (rs.eof or rs.bof) Then
 			title=rs("TITLE")
-			notice=rs("NOTICE")
+			notice= rs("NOTICE")
 		End If
 		rs.close
 		set rs=nothing
@@ -55,7 +55,14 @@ h1{font-size:18px;color:#013f88;font-weight:bold;}
         <td width="9" background="../Images/tab_12.gif">&nbsp;</td>
         <td bgcolor="#f3ffe3">
 
-        <%=notice%>
+         <%
+		set rs=conn.execute("select top 1 NOTICE From T_NOTICE where IS_TOP=1 order by info_Time desc")
+		If not (rs.eof or rs.bof) Then
+			response.write rs("NOTICE")
+		End If
+		rs.close
+		set rs=nothing
+		%>
          </td>
         <td width="9" background="../Images/tab_16.gif">&nbsp;</td>
       </tr>
