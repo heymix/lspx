@@ -4,7 +4,7 @@
 body,form,div,img,table,a,font,radio,span,h1,h2,h3,h4{
 	margin: 0px;
 	font-size: 24px;
-	color: #1F4A65;
+	color: #444444;
 	padding: 0px;
 	border: 0px;
 	font-family: "仿宋_GB2312";
@@ -26,89 +26,98 @@ body,form,div,img,table,a,font,radio,span,h1,h2,h3,h4{
 	float: left;
 	height: 192mm;
 }
+
+#user_photo｛
+
+	position: absolute;
+	top: 5px;
+	left: 350px;
+	font-weight: bold;
+
+｝
 #p_name{
 	position: absolute;
-	top: 345px;
-	left: 285px;
+	top: 35px;
+	left: 295px;
 	font-weight: bold;
 	}
 
 #gender{
 	position:absolute;
 	top:345px;
-	left:450px;
+	left:460px;
 	font-weight: bold;
 	}
 
 #year{
 	position:absolute;
 	top:345px;
-	left:560px;
+	left:570px;
 	font-weight: bold;
 	}
 
 #idcard{
 	position:absolute;
 	top:560px;
-	left:415px;
+	left:425px;
 	font-weight: bold;
 	}
 
 #crsno{
 	position:absolute;
 	top:610px;
-	left:415px;
+	left:425px;
 	font-weight: bold;
 	}
 
 #gs{
 	position:absolute;
 	top:270px;
-	left:1050px;
+	left:1060px;
 	font-weight: bold;
 	}
 #gxl{
 	position:absolute;
 	top:315px;
-	left:1050px;
+	left:1060px;
 	font-weight: bold;
 	}
 #gfg{
 	position:absolute;
 	top:360px;
-	left:1050px;
+	left:1060px;
 	font-weight: bold;
 	}
 #gxy{
 	position:absolute;
 	top:415px;
-	left:1050px;
+	left:1060px;
 	font-weight: bold;
 	}
 #jsj{
 	position:absolute;
 	top:465px;
-	left:1030px;
+	left:1040px;
 	font-weight: bold;
 	}
 
 #c_year{
 	position:absolute;
 	top:605px;
-	left:860px;
+	left:870px;
 	font-weight: bold;
 	}
 
 #c_month{
 	position:absolute;
 	top:605px;
-	left:940px;
+	left:950px;
 	font-weight: bold;
 	}
 
 #c_day{
 	position:absolute;
 	top:605px;
-	left:1000px;
+	left:1010px;
 	font-weight: bold;
 	}
