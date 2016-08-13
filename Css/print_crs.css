@@ -29,7 +29,7 @@ body,form,div,img,table,a,font,radio,span,h1,h2,h3,h4{
 
 #user_photo{
 	position: absolute;
-	top: 150px;
+	top: 140px;
 	left: 410px;
 	font-weight: bold;
 	}
@@ -113,13 +113,13 @@ body,form,div,img,table,a,font,radio,span,h1,h2,h3,h4{
 #c_month{
 	position:absolute;
 	top:605px;
-	left:950px;
+	left:960px;
 	font-weight: bold;
 	}
 
 #c_day{
 	position:absolute;
 	top:605px;
-	left:1010px;
+	left:1020px;
 	font-weight: bold;
 	}
