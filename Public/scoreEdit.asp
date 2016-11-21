@@ -28,6 +28,23 @@ Else
 					exam_score=request(trim(keyID(0))&trim(keyID(1)))
 					exam_pass=request(trim(keyID(0))&trim(keyID(1))&"_check")
 					If exam_pass<>1 Then exam_pass=0
+					set rs=server.createobject("ADODB.Recordset") 
+					sqlTopic="select * from T_TEST_TOPIC where ID="&keyID(1)
+					rs.open sqlTopic,conn,1,3
+					If not (rs.eof or rs.bof) Then
+					cc=rs("IS_PRATICE")
+						If rs("IS_PRATICE")=0 Then
+							If exam_score>=60 Then
+								exam_pass=1
+							Else
+								exam_pass=0
+							End If
+						End If
+					End If
+					rs.close
+					set rs=nothing
+					
+					
 					sql="update T_TOPIC_RESULT set RESULT="&exam_score&",IS_PASS="&exam_pass&" where TEST_ID='"&test_id&"' and USER_ID='"&trim(keyID(0))&"' and TOPIC_ID="&keyID(1)
 					'response.write sql
 					conn.execute sql,updateNO
@@ -41,7 +58,7 @@ Else
 		next
 		if Err.Number = 0 Then
 			operateLog "score.asp",operateCon&"："&subBox
-			Response.write "1|操作成功！"&updateStr
+			Response.write "1|操作成功！"&cc
 			conn.CommitTrans 
 		Else
 			Response.write "0|操作失败！"
