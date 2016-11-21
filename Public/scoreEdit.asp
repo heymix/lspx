@@ -32,7 +32,6 @@ Else
 					sqlTopic="select * from T_TEST_TOPIC where ID="&keyID(1)
 					rs.open sqlTopic,conn,1,3
 					If not (rs.eof or rs.bof) Then
-					cc=rs("IS_PRATICE")
 						If rs("IS_PRATICE")=0 Then
 							If exam_score>=60 Then
 								exam_pass=1
