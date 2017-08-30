@@ -211,7 +211,7 @@ End If
             <input type="text" id="GRADUATE_DATE" name="GRADUATE_DATE" value="<%=GRADUATE_DATE%>" readonly="readonly" />
             </div><div class="editFormRight">
             <div class="editFormPhoto"><img id="PHOTO_IMG" src="<%=PHOTO_show%>" height="151" width="108"></div><br>
-            <label for="UploadFiles">*上传照片:<br>照片尺寸1寸<br> 413*295像素 <br>小于2MB<br>照片背景白色或者浅色</label>
+            <label for="UploadFiles">*上传照片:<br>照片尺寸1寸<br> 413*295像素 <br>小于2MB<br>照片背景蓝色或者浅色</label>
             <input type="hidden" id="PHOTO" name="PHOTO" value="<%=PHOTO%>">
            <%If CHECKED<>1 Then%>
             <iframe style="margin-top:10px; margin-left:0px;" ID="UploadFiles" name="upload" src="upload.asp" frameborder=0 scrolling=no width="430" height="23"></iframe>

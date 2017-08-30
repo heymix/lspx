@@ -39,7 +39,7 @@ function submitChoiceTest(){
                <option value="0">选择考试</option>
                <%
 					set rs=server.createobject("adodb.recordset")
-					sql="select ID,TITLE,TEST_CATE from T_TEST as main where CHECKED=1 and '"&sys_school_id&"' in (select SCHOOL_ID  from T_EXA_SCHOOL_RELATION where EXA_ID in (select EXA_ID from T_TEST_EXA_RELATION as TE where main.ID=TE.TEST_ID))"
+					sql = "select ID,TITLE,TEST_CATE from T_TEST where ID in (select TEST_ID from T_TEST_RESULT r left join T_EXAMINEE as e on r.USER_ID=e.USER_ID where e.SCHOOL_ID='"&sys_school_id&"')"
 					response.write sql
 					rs.open sql,conn,1,3
 					do while not (rs.eof or err)
